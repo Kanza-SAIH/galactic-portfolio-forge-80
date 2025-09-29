@@ -1,0 +1,242 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "projects": "Projets",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "KANZA SAIH",
+    "subtitle": "[ INTÉGRATEUR IA ]",
+    "description": "Passionnée par l'intelligence artificielle et les nouvelles technologies, j'aspire à intégrer une entreprise innovante où je pourrai mettre à profit mes compétences en intégration et en développement de solutions IA.",
+    "explore": "Explorer mon univers",
+    "contact": "Me contacter"
+  },
+  "skills": {
+    "title": "COMPÉTENCES",
+    "description": "Découvrez les technologies et compétences que j'ai maîtrisées dans l'univers du développement et de l'IA.",
+    "categories": [
+      {
+        "title": "Compétences Techniques",
+        "skills": ["Python", "JavaScript", "React", "HTML", "CSS", "Tailwind", "WordPress", "Prompt Engineering"],
+        "icon": "⚡"
+      },
+      {
+        "title": "Base de Données",
+        "skills": ["SQL", "NoSQL"],
+        "icon": "🗄️"
+      },
+      {
+        "title": "Outils",
+        "skills": ["VSCode", "Git/GitHub", "Postman", "Odoo"],
+        "icon": "🛠️"
+      },
+      {
+        "title": "Méthodologies",
+        "skills": ["Méthodes agiles", "Scrum", "UML"],
+        "icon": "📋"
+      },
+      {
+        "title": "Langues",
+        "skills": ["Arabe (Native)", "Français (B2)", "Anglais (B1)"],
+        "icon": "🌐"
+      }
+    ]
+  },
+  "experience": {
+    "title": "EXPÉRIENCES",
+    "description": "Mon parcours professionnel dans le développement web et la transformation digitale",
+    "items": [
+      {
+        "title": "Assistante RH - CDI",
+        "company": "CASHPLUS",
+        "location": "Casablanca",
+        "period": "Novembre 2018 - Janvier 2022",
+        "description": [
+          "Optimisation de l'expérience employé grâce à la gestion centralisée sur Odoo des créations de profils, contrats, congés et suivis médicaux",
+          "Transformation numérique des outils RH en collaboration avec l'équipe IT",
+          "Collaboration avec l'équipe IT pour le développement de nouvelles fonctionnalités sur Odoo"
+        ],
+        "technologies": ["Odoo", "Gestion RH", "Transformation digitale"],
+        "type": "CDI"
+      },
+      {
+        "title": "Développeur Full Stack - Stage",
+        "company": "COPILOTE",
+        "location": "Casablanca",
+        "period": "Novembre 2022 - Avril 2023",
+        "description": [
+          "Création d'un Site-Web E-commerce 100% Digital pour vendre l'ensemble des produits numériques (Vidéos, Audios, Documents...)"
+        ],
+        "technologies": ["React", "Tailwind CSS", "Laravel"],
+        "type": "Stage"
+      },
+      {
+        "title": "Développeur Web - Stage",
+        "company": "Coopérative MIHADDA",
+        "location": "Casablanca",
+        "period": "Novembre - Décembre 2023",
+        "description": [
+          "Création d'un Site-Web E-commerce MIHADDA pour vendre des produits cosmétiques"
+        ],
+        "technologies": ["WordPress", "WooCommerce"],
+        "type": "Stage"
+      },
+      {
+        "title": "Développeur - Stage",
+        "company": "SKILLSOLUTIONS",
+        "location": "Casablanca",
+        "period": "Janvier - Juin 2024",
+        "description": [
+          "Participation à la création d'un Site-Web de recrutement pour un cabinet expert en recrutement, conseil et accompagnement RH"
+        ],
+        "technologies": ["WordPress"],
+        "type": "Stage"
+      }
+    ]
+  },
+  "education": {
+    "title": "FORMATIONS & DIPLÔMES",
+    "description": "Mon parcours éducatif et mes certifications dans le domaine technologique",
+    "formationsTitle": "Formations & Diplômes",
+    "certificationsTitle": "Certifications",
+    "education": [
+      {
+        "title": "Intégrateur IA",
+        "institution": "CTPES",
+        "location": "CASABLANCA",
+        "period": "2025 - Présent",
+        "type": "Formation",
+        "description": "Formation spécialisée en intégration d'intelligence artificielle",
+        "status": "En cours"
+      },
+      {
+        "title": "DTS en Développement Informatique",
+        "institution": "ISGI",
+        "location": "CASABLANCA",
+        "period": "2021 - 2023",
+        "type": "Diplôme",
+        "description": "Projet fin d'études: Application Mobile SE7ATY - une plateforme intégrée permettant de trouver un médecin, de prendre des rendez-vous médicaux, de commander des médicaments à domicile et d'organiser des analyses médicales.",
+        "technologies": ["Android", "SQLite", "Java"],
+        "status": "Obtenu"
+      },
+      {
+        "title": "Formation Full Stack Developer",
+        "institution": "EFE-ES2IM",
+        "location": "CASABLANCA",
+        "period": "2023",
+        "type": "Formation",
+        "description": "Formation complète en développement web full stack",
+        "status": "Obtenu"
+      },
+      {
+        "title": "Baccalauréat en Sciences de la Vie et Terre",
+        "institution": "LYCÉE MOHAMMED VI",
+        "location": "CASABLANCA",
+        "period": "2010 - 2011",
+        "type": "Diplôme",
+        "description": "Baccalauréat scientifique avec spécialisation en sciences naturelles",
+        "status": "Obtenu"
+      }
+    ],
+    "certifications": [
+      "Responsive Website Basics: Code with HTML, CSS, and JavaScript",
+      "Introduction to Front-end Development with ReactJS",
+      "Animation avec JavaScript et jQuery",
+      "Introduction à Git et GitHub",
+      "Base de données relationnelle avancée et SQL",
+      "Gestion de Paie Pratique - Sage Paie",
+      "Bureautique et système d'exploitation",
+      "Connaître et maîtriser les aspects réglementaires liés à la fonction RH"
+    ]
+  },
+  "projects": {
+    "title": "PROJETS RÉALISÉS",
+    "description": "Découvrez les projets que j'ai développés, allant des sites e-commerce aux applications mobiles",
+    "items": [
+      {
+        "title": "SkillSolutions",
+        "description": "Site-Web de recrutement pour un cabinet expert en recrutement, conseil et accompagnement RH.",
+        "url": "https://www.skillsolutions.ma/",
+        "technologies": ["WordPress"],
+        "type": "Site Web",
+        "category": "Recrutement RH"
+      },
+      {
+        "title": "Mihadda",
+        "description": "Site-Web E-commerce pour vendre des produits cosmétiques de qualité.",
+        "url": "https://www.mihadda.ma/",
+        "technologies": ["WordPress", "WooCommerce"],
+        "type": "E-commerce",
+        "category": "Cosmétiques"
+      },
+      {
+        "title": "Copilote",
+        "description": "Site-Web E-commerce 100% Digital pour vendre l'ensemble des produits numériques (Vidéos, Audios, Documents...).",
+        "technologies": ["React", "Tailwind CSS", "Laravel"],
+        "type": "E-commerce Digital",
+        "category": "Produits Numériques"
+      },
+      {
+        "title": "SE7ATY",
+        "description": "Application Mobile - une plateforme intégrée permettant de trouver un médecin, de prendre des rendez-vous médicaux, de commander des médicaments à domicile et d'organiser des analyses médicales.",
+        "technologies": ["Android", "SQLite", "Java"],
+        "type": "Application Mobile",
+        "category": "Santé"
+      }
+    ],
+    "github": "Voir plus sur GitHub",
+    "viewSite": "Voir le site",
+    "studyProject": "Projet d'étude"
+  },
+  "contact": {
+    "title": "CONTACTEZ-MOI",
+    "description": "Prêt à collaborer sur votre prochain projet ? N'hésitez pas à me contacter !",
+    "info": [
+      {
+        "label": "Email",
+        "value": "saihkanza@gmail.com",
+        "href": "mailto:saihkanza@gmail.com",
+        "description": "Envoyez-moi un email"
+      },
+      {
+        "label": "Téléphone",
+        "value": "+212 663 032 752",
+        "href": "tel:+212663032752",
+        "description": "Appelez-moi directement"
+      },
+      {
+        "label": "Localisation",
+        "value": "Casablanca, Maroc",
+        "description": "Ma localisation actuelle"
+      },
+      {
+        "label": "LinkedIn",
+        "value": "Kenza Saih",
+        "href": "https://www.linkedin.com/in/kenzasaih/",
+        "description": "Connectons-nous sur LinkedIn"
+      },
+      {
+        "label": "GitHub",
+        "value": "Kanza-SAIH",
+        "href": "https://github.com/Kanza-SAIH",
+        "description": "Découvrez mes projets"
+      }
+    ],
+    "workTitle": "Travaillons ensemble !",
+    "workDescription": "Je suis toujours à la recherche de nouveaux défis et opportunités pour mettre mes compétences en IA et développement web au service de projets innovants. Que ce soit pour un stage, un CDI ou une collaboration, n'hésitez pas à me contacter.",
+    "sendEmail": "Envoyer un email",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "subtitle": "Intégrateur IA • Développeur Web • Passionnée de technologie",
+    "quote": "Dans une galaxie lointaine, très lointaine... le code et l'IA créent l'avenir.",
+    "builtWith": "Développé avec",
+    "copyright": "© {{year}} Kanza Saih. Tous droits réservés.",
+    "madeWith": "Fait avec",
+    "and": "et",
+    "forInnovation": "pour l'innovation",
+    "forceQuote": "Que la Force du code soit avec vous"
+  }
+}

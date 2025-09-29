@@ -1,61 +1,36 @@
+import { useTranslation } from 'react-i18next';
+import '@/lib/i18n';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github, Smartphone, Globe, ShoppingCart, Users } from 'lucide-react';
 
-const projects = [
-  {
-    title: 'SkillSolutions',
-    description: 'Site-Web de recrutement pour un cabinet expert en recrutement, conseil et accompagnement RH.',
-    url: 'https://www.skillsolutions.ma/',
-    technologies: ['WordPress'],
-    type: 'Site Web',
-    icon: Users,
-    category: 'Recrutement RH'
-  },
-  {
-    title: 'Mihadda',
-    description: 'Site-Web E-commerce pour vendre des produits cosmétiques de qualité.',
-    url: 'https://www.mihadda.ma/',
-    technologies: ['WordPress', 'WooCommerce'],
-    type: 'E-commerce',
-    icon: ShoppingCart,
-    category: 'Cosmétiques'
-  },
-  {
-    title: 'Copilote',
-    description: 'Site-Web E-commerce 100% Digital pour vendre l\'ensemble des produits numériques (Vidéos, Audios, Documents...).',
-    technologies: ['React', 'Tailwind CSS', 'Laravel'],
-    type: 'E-commerce Digital',
-    icon: Globe,
-    category: 'Produits Numériques'
-  },
-  {
-    title: 'SE7ATY',
-    description: 'Application Mobile - une plateforme intégrée permettant de trouver un médecin, de prendre des rendez-vous médicaux, de commander des médicaments à domicile et d\'organiser des analyses médicales.',
-    technologies: ['Android', 'SQLite', 'Java'],
-    type: 'Application Mobile',
-    icon: Smartphone,
-    category: 'Santé'
-  }
-];
-
 export function Projects() {
+  const { t } = useTranslation();
+  const projects = t('projects.items', { returnObjects: true }) as Array<{
+    title: string;
+    description: string;
+    url?: string;
+    technologies: string[];
+    type: string;
+    category: string;
+  }>;
+  // Map icons to projects
+  const icons = [Users, ShoppingCart, Globe, Smartphone];
   return (
     <section id="projects" className="py-20 px-6 bg-gradient-to-b from-card/30 to-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-4 bg-gradient-imperial bg-clip-text text-transparent">
-            PROJETS RÉALISÉS
+            {t('projects.title')}
           </h2>
           <p className="font-exo text-lg text-muted-foreground max-w-2xl mx-auto">
-            Découvrez les projets que j'ai développés, allant des sites e-commerce aux applications mobiles
+            {t('projects.description')}
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => {
-            const IconComponent = project.icon;
+            const IconComponent = icons[index];
             return (
               <Card 
                 key={index}
@@ -63,7 +38,6 @@ export function Projects() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="absolute inset-0 bg-gradient-imperial opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                
                 <div className="relative z-10 p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center">
@@ -82,7 +56,6 @@ export function Projects() {
                         </Badge>
                       </div>
                     </div>
-                    
                     <Badge 
                       variant="outline"
                       className="border-primary/30 text-primary font-exo"
@@ -90,11 +63,9 @@ export function Projects() {
                       {project.type}
                     </Badge>
                   </div>
-
                   <p className="font-exo text-foreground/90 mb-4 leading-relaxed">
                     {project.description}
                   </p>
-
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech) => (
                       <Badge 
@@ -106,7 +77,6 @@ export function Projects() {
                       </Badge>
                     ))}
                   </div>
-
                   <div className="flex gap-3">
                     {project.url && (
                       <Button 
@@ -116,11 +86,10 @@ export function Projects() {
                       >
                         <a href={project.url} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
-                          Voir le site
+                          {t('projects.viewSite')}
                         </a>
                       </Button>
                     )}
-                    
                     {project.title === 'SE7ATY' && (
                       <Button 
                         variant="outline"
@@ -128,7 +97,7 @@ export function Projects() {
                         className="border-primary/30 bg-card/50 hover:bg-primary/10 hover:border-primary/60 font-exo transition-all duration-300"
                       >
                         <Smartphone className="h-4 w-4 mr-2" />
-                        Projet d'étude
+                        {t('projects.studyProject')}
                       </Button>
                     )}
                   </div>
@@ -137,7 +106,6 @@ export function Projects() {
             );
           })}
         </div>
-
         <div className="text-center mt-12">
           <Button 
             asChild
@@ -147,7 +115,7 @@ export function Projects() {
           >
             <a href="https://github.com/Kanza-SAIH" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5 mr-2" />
-              Voir plus sur GitHub
+              {t('projects.github')}
             </a>
           </Button>
         </div>

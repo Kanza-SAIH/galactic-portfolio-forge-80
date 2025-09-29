@@ -1,6 +1,9 @@
+import React from 'react';
 import { Heart, Code2, Zap } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -29,14 +32,14 @@ export function Footer() {
               KANZA SAIH
             </h3>
             <p className="font-exo text-muted-foreground">
-              Intégrateur IA • Développeur Web • Passionnée de technologie
+              {t('footer.subtitle')}
             </p>
           </div>
 
           {/* Inspirational quote */}
           <div className="mb-8">
             <blockquote className="font-exo text-lg italic text-foreground/80 max-w-2xl mx-auto">
-              "Dans une galaxie lointaine, très lointaine... le code et l'IA créent l'avenir."
+              {t('footer.quote')}
             </blockquote>
           </div>
 
@@ -44,7 +47,7 @@ export function Footer() {
           <div className="flex justify-center items-center space-x-4 mb-8">
             <div className="flex items-center space-x-2 text-primary">
               <Code2 className="h-5 w-5" />
-              <span className="font-exo text-sm">Développé avec</span>
+              <span className="font-exo text-sm">{t('footer.builtWith')}</span>
             </div>
             <div className="flex items-center space-x-4 text-muted-foreground">
               <span className="font-exo text-sm">React</span>
@@ -60,20 +63,20 @@ export function Footer() {
 
           {/* Copyright */}
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-4 text-sm text-muted-foreground font-exo">
-            <span>© {currentYear} Kanza Saih. Tous droits réservés.</span>
+            <span>{t('footer.copyright', { year: currentYear })}</span>
             <div className="hidden sm:block w-1 h-1 bg-primary/30 rounded-full"></div>
             <div className="flex items-center space-x-1">
-              <span>Fait avec</span>
+              <span>{t('footer.madeWith')}</span>
               <Heart className="h-4 w-4 text-destructive animate-pulse" />
-              <span>et</span>
+              <span>{t('footer.and')}</span>
               <Zap className="h-4 w-4 text-accent animate-pulse" />
-              <span>pour l'innovation</span>
+              <span>{t('footer.forInnovation')}</span>
             </div>
           </div>
 
           {/* Force quote */}
           <div className="mt-6 text-xs text-muted-foreground/60 font-exo italic">
-            "Que la Force du code soit avec vous"
+            {t('footer.forceQuote')}
           </div>
         </div>
       </div>

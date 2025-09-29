@@ -1,27 +1,25 @@
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { useTranslation } from 'react-i18next';
+import '@/lib/i18n';
 
 const navItems = [
-  { id: 'hero', label: 'Accueil' },
-  { id: 'skills', label: 'Compétences' },
-  { id: 'experience', label: 'Expériences' },
-  { id: 'education', label: 'Formations' },
-  { id: 'projects', label: 'Projets' },
-  { id: 'contact', label: 'Contact' },
+  { id: 'hero', key: 'home' },
+  { id: 'skills', key: 'about' },
+  { id: 'experience', key: 'projects' },
+  { id: 'education', key: 'contact' },
 ];
 
 export function Navigation() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
       const sections = navItems.map(item => document.getElementById(item.id));
       const scrollPosition = window.scrollY + 100;
-
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
         if (section && section.offsetTop <= scrollPosition) {
@@ -30,7 +28,6 @@ export function Navigation() {
         }
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -40,6 +37,10 @@ export function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleLanguageChange = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -53,7 +54,6 @@ export function Navigation() {
           <div className="font-orbitron font-bold text-xl bg-gradient-lightsaber bg-clip-text text-transparent">
             KANZA SAIH
           </div>
-          
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -65,14 +65,27 @@ export function Navigation() {
                     : 'text-foreground/80 hover:text-primary'
                 }`}
               >
-                {item.label}
+                {t(`navbar.${item.key}`)}
                 <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-lightsaber transition-all duration-300 ${
                   activeSection === item.id ? 'w-full' : 'w-0 group-hover:w-full'
                 }`} />
               </button>
             ))}
           </div>
-
+          <div className="ml-4 flex items-center space-x-2">
+            <button
+              onClick={() => handleLanguageChange('en')}
+              className={`px-2 py-1 rounded ${i18n.language === 'en' ? 'bg-primary text-white' : 'bg-background text-foreground'}`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => handleLanguageChange('fr')}
+              className={`px-2 py-1 rounded ${i18n.language === 'fr' ? 'bg-primary text-white' : 'bg-background text-foreground'}`}
+            >
+              FR
+            </button>
+          </div>
           <ThemeToggle />
         </div>
       </div>
