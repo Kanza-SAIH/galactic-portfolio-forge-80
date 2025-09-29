@@ -203,8 +203,8 @@
       {
         "label": "Phone",
         "value": "+212 663 032 752",
-        "href": "tel:+212663032752",
-        "description": "Call me directly"
+        "href": "https://wa.me/212663032752",
+        "description": "Contact me on WhatsApp"
       },
       {
         "label": "Location",
