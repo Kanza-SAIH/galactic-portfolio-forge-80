@@ -1,11 +1,14 @@
 {
   "navbar": {
     "home": "Accueil",
-    "about": "À propos",
+    "skills": "Compétences",
+    "experience": "Expériences",
+    "education": "Formations & Diplômes",
     "projects": "Projets",
-    "contact": "Contact",
+    "contact": "Contactez-moi",
     "language": "Langue"
   },
+
   "hero": {
     "title": "KANZA SAIH",
     "subtitle": "[ INTÉGRATEUR IA ]",

@@ -1,9 +1,11 @@
 {
   "navbar": {
     "home": "Home",
-    "about": "About",
+    "skills": "Skills",
+    "experience": "Experiences",
+     "education": "Education & Degrees",
     "projects": "Projects",
-    "contact": "Contact",
+    "contact": "Contact Me",
     "language": "Language"
   },
   "hero": {

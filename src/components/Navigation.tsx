@@ -5,9 +5,11 @@ import '@/lib/i18n';
 
 const navItems = [
   { id: 'hero', key: 'home' },
-  { id: 'skills', key: 'about' },
-  { id: 'experience', key: 'projects' },
-  { id: 'education', key: 'contact' },
+  { id: 'skills', key: 'skills' },
+  { id: 'experience', key: 'experience' },
+  { id: 'education', key: 'education' },
+  { id: 'projects', key: 'projects' },
+  { id: 'contact', key: 'contact' },
 ];
 
 export function Navigation() {
