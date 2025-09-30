@@ -105,7 +105,7 @@ export function Contact() {
                 size="lg"
                 className="bg-gradient-lightsaber hover:shadow-jedi text-primary-foreground font-exo font-semibold px-8 py-3 transition-all duration-300 hover:scale-105"
               >
-                <a href="mailto:saihkanza@gmail.com">
+                <a href={contactInfo.find(c => c.label === 'Email')?.href || 'mailto:saihkanza@gmail.com'}>
                   <Mail className="h-5 w-5 mr-2" />
                   {t('contact.sendEmail')}
                 </a>
